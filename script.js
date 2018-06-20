@@ -3,7 +3,7 @@ document.onreadystatechange = () => {
     const canvas = document.querySelector('#draw');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
-    canvas.hight = window.innerHeight;
+    canvas.height = window.innerHeight;
     ctx.strokeStyle = '#BADA55';
     ctx.lineJoin = 'round';
     ctx.lineCap = 'round';
@@ -17,7 +17,7 @@ document.onreadystatechange = () => {
     let direction = true;
 
     function draw(e) {
-      if (!isDrawing) return
+      if (!isDrawing) return;
       console.log(e);
       ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
       ctx.beginPath();
